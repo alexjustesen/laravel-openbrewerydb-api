@@ -1,24 +1,26 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "alexjustesen/laravel-openbrewerydb-api",
+    "description": "This is my package laravel-openbrewerydb-api",
     "keywords": [
-        ":vendor_name",
+        "alexjustesen",
         "laravel",
-        ":package_slug"
+        "laravel-openbrewerydb-api"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/alexjustesen/laravel-openbrewerydb-api",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Alex Justesen",
+            "email": "packages@alexjustesen.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.73"
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/contracts": "^8.73",
+        "sammyjo20/saloon-laravel": "^0.2.0",
+        "spatie/laravel-package-tools": "^1.9.2"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -34,13 +36,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "AlexJustesen\\OpenbrewerydbApi\\": "src",
+            "AlexJustesen\\OpenbrewerydbApi\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "AlexJustesen\\OpenbrewerydbApi\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,15 +51,19 @@
         "test-coverage": "vendor/bin/pest coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "AlexJustesen\\OpenbrewerydbApi\\OpenbrewerydbApiServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "OpenbrewerydbApi": "AlexJustesen\\OpenbrewerydbApi\\Facades\\OpenbrewerydbApi"
             }
         }
     },
