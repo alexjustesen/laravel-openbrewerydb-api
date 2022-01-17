@@ -2,9 +2,9 @@
 
 namespace AlexJustesen\OpenbrewerydbApi\Tests;
 
+use AlexJustesen\OpenbrewerydbApi\OpenbrewerydbApiServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AlexJustesen\OpenbrewerydbApi\OpenbrewerydbApiServiceProvider;
 
 class TestCase extends Orchestra
 {

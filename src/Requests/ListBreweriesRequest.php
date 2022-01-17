@@ -10,7 +10,8 @@ use Sammyjo20\Saloon\Traits\Features\HasQueryParams;
 
 class ListBreweriesRequest extends SaloonRequest
 {
-    use AcceptsJson, HasQueryParams;
+    use AcceptsJson;
+    use HasQueryParams;
 
     /**
      * Define the method that the request will use.
