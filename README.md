@@ -1,4 +1,4 @@
-# This is my package laravel-openbrewerydb-api
+# Laravel Openbrewerydb API
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/alexjustesen/laravel-openbrewerydb-api.svg?style=flat-square)](https://packagist.org/packages/alexjustesen/laravel-openbrewerydb-api)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/alexjustesen/laravel-openbrewerydb-api/run-tests?label=tests)](https://github.com/alexjustesen/laravel-openbrewerydb-api/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -6,14 +6,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/alexjustesen/laravel-openbrewerydb-api.svg?style=flat-square)](https://packagist.org/packages/alexjustesen/laravel-openbrewerydb-api)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-openbrewerydb-api.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-openbrewerydb-api)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -23,37 +15,53 @@ You can install the package via composer:
 composer require alexjustesen/laravel-openbrewerydb-api
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-openbrewerydb-api-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
 php artisan vendor:publish --tag="laravel-openbrewerydb-api-config"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-openbrewerydb-api-views"
-```
-
 ## Usage
 
+### Auto Complete Search for Breweries
+
 ```php
-$openbrewerydbApi = new AlexJustesen\OpenbrewerydbApi();
-echo $openbrewerydbApi->echoPhrase('Hello, AlexJustesen!');
+use AlexJustesen\OpenbrewerydbApi\OpenbrewerydbApi;
+
+$request = OpenbrewerydbApi::autoComplete('broad');
+
+$response = $request->json();
+```
+
+
+### Get a Brewery
+
+```php
+use AlexJustesen\OpenbrewerydbApi\OpenbrewerydbApi;
+
+$request = OpenbrewerydbApi::get('broad-brook-brewing-company-suffield');
+
+$response = $request->json();
+```
+
+### List Breweries
+
+```php
+use AlexJustesen\OpenbrewerydbApi\OpenbrewerydbApi;
+
+$request = OpenbrewerydbApi::list();
+
+$response = $request->json();
+```
+
+### Search for Breweries
+
+```php
+use AlexJustesen\OpenbrewerydbApi\OpenbrewerydbApi;
+
+$request = $request = OpenbrewerydbApi::search('broad');
+
+$response = $request->json();
 ```
 
 ## Testing
