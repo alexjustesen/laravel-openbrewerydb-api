@@ -41,5 +41,6 @@ class GetBreweryRequest extends SaloonRequest
      */
     public function __construct(
         public string $breweryId
-    ){}
+    ) {
+    }
 }
