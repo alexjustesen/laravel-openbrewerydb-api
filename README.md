@@ -5,7 +5,10 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/alexjustesen/laravel-openbrewerydb-api/Check%20&%20fix%20styling?label=code%20style)](https://github.com/alexjustesen/laravel-openbrewerydb-api/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/alexjustesen/laravel-openbrewerydb-api.svg?style=flat-square)](https://packagist.org/packages/alexjustesen/laravel-openbrewerydb-api)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This pacakge provides an easy connection to the [Open Brewery DB](https://www.openbrewerydb.org) project for PHP and Laravel applications.
+
+## About Open Brewery DB
+Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops. The goal of Open Brewery DB is to maintain an open-source, community-driven dataset and provide a public API. It is our belief that public information should be freely accessible for the betterment of the beer community and the happiness of web developers and data analysts.
 
 ## Installation
 
